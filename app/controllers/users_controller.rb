@@ -6,7 +6,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+# idに応じたuserをとってきて@userという変数に
   def show
+    @user = User.find(params[:id])
   end
 
   def edit
