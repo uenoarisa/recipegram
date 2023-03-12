@@ -26,8 +26,6 @@ class UsersController < ApplicationController
   private
   def user_params
     # :user　モデル名　:username, :email, :profile, :prifile_image　カラム名　
-    params.require(:user).permit(:username, :email, :profile, :prifile_image)
+    params.require(:user).permit(:username, :email, :profile, :profile_image)
   end
-
-  
 end

@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   attachment :profile_image # ここを追加（_idは含めない）
+  has_many :recipes, dependent: :destroy
+  # ユーザーが削除されたらrecipeを
 end
